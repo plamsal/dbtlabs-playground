@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: healthcare_raw
+    description: Raw healthcare data loaded directly into Snowflake.
+    database: MCAP_DEV
+    schema: HEALTHCARE_RAW
+    tables:
+      - name: patients
+        description: Source patient records.
+        columns:
+          - name: patient_id
+            data_tests:
+              - not_null
+              - unique

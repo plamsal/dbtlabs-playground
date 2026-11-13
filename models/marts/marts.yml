@@ -1,0 +1,15 @@
+version: 2
+
+models:
+  - name: patients_by_state_gender
+    description: Patient counts grouped by state and gender for reporting.
+    columns:
+      - name: state
+        data_tests:
+          - not_null
+      - name: gender
+        data_tests:
+          - not_null
+      - name: patient_count
+        data_tests:
+          - not_null

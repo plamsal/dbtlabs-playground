@@ -1,0 +1,7 @@
+# dbt generated files
+target/
+dbt_packages/
+logs/
+
+# Keep local credentials out of Git
+profiles.yml

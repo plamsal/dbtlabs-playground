@@ -1,0 +1,25 @@
+name: mcap_healthcare
+version: 1.0.0
+config-version: 2
+
+profile: mcap_healthcare
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  mcap_healthcare:
+    staging:
+      +schema: STAGING
+      +materialized: view
+    marts:
+      +schema: MARTS
+      +materialized: table

@@ -13,3 +13,10 @@ sources:
             data_tests:
               - not_null
               - unique
+      - name: encounters
+        description: Raw patient encounters and charges.
+        columns:
+          - name: encounter_id
+            data_tests:
+              - not_null
+              - unique
